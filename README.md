@@ -16,7 +16,7 @@ Parameters to be tuned for XGBoost:
 4. learning rate
 5. missing
 6. objective
-7. 
+
 Parameters to be tuned for SVM: 
 1. kernel type
 2. gamma
