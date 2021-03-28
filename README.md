@@ -9,7 +9,7 @@ Pick two different types of non-linear classifiers from above for classification
 
 For each of learning algorithms, we will need to set various hyperparameters (e.g., the type of kernel and regularization parameter for SVM, tree method, max depth, number of weak classifiers, etc for XGBoost, number of estimators and min impurity decrease for Random Forests). Often there are defaults that make a good starting point, but we may need to adjust at least some of them to get good performance. Use hold-out validation or K-fold cross-validation to do this (scikit-learn has nice features to accomplish this, e.g., you may use train test split to split data into train and test data and sklearn.model selection for K-fold cross validation). Do not make any hyperparameter choices (or any other similar choices) based on the test set! We should only compute the test error rates after you have settled on hyperparameter settings and trained your two final classifiers.
 
-Parameters to be tuned for XGBoost: 
+### Parameters to be tuned for XGBoost: 
 1. ```n estimators```
 2. ```max depth```
 3. ```lambda```
@@ -17,19 +17,19 @@ Parameters to be tuned for XGBoost:
 5. ```missing```
 6. ```objective```
 
-Parameters to be tuned for SVM: 
+### Parameters to be tuned for SVM: 
 1. ```kernel type```
 2. ```gamma```
 3. ```C```
 
-Parameters to be tuned for Random Forests: 
+### Parameters to be tuned for Random Forests: 
 1. ```n estimators```
 2. ```bootstrap```
 3. ```max depth```
 4. ```min impurity decrease```
 5. ```min samples leaf```
 
-Example code to use XGBoost
+### Example code to use XGBoost
 ```python
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
