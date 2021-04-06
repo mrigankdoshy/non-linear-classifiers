@@ -26,13 +26,14 @@ predictions = [round(value) for value in y_prediction]
 
 # Evaluate predictions
 accuracy = accuracy_score(y_test, predictions)
-print("\nAccuracy : %.2f%%" % (accuracy * 100))
+print("\nAccuracy: %.2f%%" % (accuracy * 100))
 
 ''' 
 Tuning hyperparameters.
 Make lists of values and get all possible combinations
 If I add more entries, it takes way too long to compute
 '''
+
 max_depth = [4, 5, 6]
 learning_rate = [0.05, 0.1, 0.2]
 missing = [None, 0]
@@ -66,6 +67,7 @@ for parameter in hyperparameters:
         best_model = parameters
 print("Best accuracy: ", accuracy)
 print("Best model: ", best_model)
+
 ''' 
 The max_depth should be changed to 5. Since the tree is shallow, the learning rate should be lowered from 0.1 to 0.05. For n_estimators < 100, the accuracy went down drastically. For values > 200, it also went down. After some hit and trial, I figured that the value of 190 gives a higher accuracy.
 '''
