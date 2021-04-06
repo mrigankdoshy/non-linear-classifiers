@@ -31,7 +31,10 @@ print("\nAccuracy: %.2f%%" % (accuracy * 100))
 ''' 
 Tuning hyperparameters.
 Make lists of values and get all possible combinations
-If I add more entries, it takes way too long to compute
+If I add more entries, it takes way too long to compute. 
+
+WARNING: This takes 1 hour compute on a MacBook Pro: 2.8 GHz Quad-Core Intel Core i7 with 16GB Memory. 
+Please comment from line 46 to 75 to run final answer directly.
 '''
 
 new_y_train = []
