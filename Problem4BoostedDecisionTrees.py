@@ -75,7 +75,7 @@ print("\nBest accuracy that we can get: ", accuracy)
 print("\nThe model that gives this is: ", best_model)
 
 ''' 
-The max_depth should be changed to 5. Since the tree is shallow, the learning rate should be lowered from 0.1 to 0.05. For n_estimators < 100, the accuracy went down drastically. For values > 200, it also went down. After some hit and trial, I figured that the value of 190 gives a higher accuracy.
+The max_depth should be changed to 5. The learning rate should be 0.2. For n_estimators < 100, the accuracy went down drastically. For values > 250, it also went down. After some hit and trial, I figured that the value of 190 or 200 gives a higher accuracy.
 '''
 
 new_model = XGBClassifier(max_depth=3, learning_rate=0.2, missing=None,
