@@ -89,8 +89,8 @@ accuracy = cross_val_scores.mean() * 100
 
 print("\nAccuracy of the new model: ", accuracy)
 
-print("\nCross Validation Training Error Rate for the new model: {0}".format(
-    1-cross_val_scores.mean()))
+print("\nCross Validation Training Error Rate for the new model: ",
+      1-cross_val_scores.mean())
 
-print("\nTest Error Rate for the new model: {0}".format(
-    1-new_model.score(X_test, y_test)))
+print("\nTest Error Rate for the new model: ",
+      1-new_model.score(X_test, y_test))
