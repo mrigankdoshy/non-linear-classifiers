@@ -35,7 +35,7 @@ Make lists of values and get all possible combinations
 If I add more entries, it takes way too long to compute. 
 
 WARNING: This takes 1 hour compute on a MacBook Pro: 2.8 GHz Quad-Core Intel Core i7 with 16GB Memory. 
-Please comment from line 46 to 75 to run final answer directly.
+Please comment from line 41 to 69 to run final answer directly.
 '''
 
 n_estimators = [50, 100, 200, 300]
