@@ -71,6 +71,15 @@ print("Accuracy: %.2f%%" % (accuracy * 100.0))
 | ```missing``` | None  | None  |
 | ```objective``` | logistic:binary  | logistic:binary |
 
+**Accuracy of Default Model:** 84.83%
+
+**Accuracy of New Model:** 85.0711%
+
+**Cross Validation Training Error Rate:** 0.1492889480913432
+
+**Test Error Rate:** 0.14624408820097046
+
+
 ### Random Forests (Random Forest Classifier)
 
 | Hyperparameter | Default Value | Final Value |
@@ -80,3 +89,11 @@ print("Accuracy: %.2f%%" % (accuracy * 100.0))
 | ```max_depth``` | None  | None |
 | ```min_impurity_decrease``` | 0.0 | 0.0 |
 | ```min_samples_leaf``` | 1 | 2 |
+
+**Accuracy of Default Model:** 83.30%
+
+**Accuracy of New Model:** 84.5674%
+
+**Cross Validation Training Error Rate:** 0.1543255673495194
+
+**Test Error Rate:** 0.15293900866040167
