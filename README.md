@@ -70,3 +70,13 @@ print("Accuracy: %.2f%%" % (accuracy * 100.0))
 | ```learning_rate``` | 0.3000000012  | 0.2  |
 | ```missing``` | None  | None  |
 | ```objective``` | logistic:binary  | logistic:binary |
+
+### Random Forests (Random Forest Classifier)
+
+| Hyperparameter | Default Value | Final Value |
+| ------------- | ------------- | ------------- |
+| ```n_estimators``` | 100 | 300 |
+| ```bootstrap``` | True  | True |
+| ```max_depth``` | None  | None |
+| ```min_impurity_decrease``` | 0.0 | 0.0 |
+| ```min_samples_leaf``` | 1 | 2 |
