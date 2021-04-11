@@ -57,3 +57,16 @@ predictions = [round(value) for value in y_pred]
 accuracy = accuracy_score(y_test, predictions) 
 print("Accuracy: %.2f%%" % (accuracy * 100.0))
 ```
+
+## Results
+
+### Boosted Decision Trees (XGBoost Classifier)
+
+| Hyperparameter | Default Value | Final Value |
+| ------------- | ------------- | ------------- |
+| ```n_estimators``` | 100 | 200  |
+| ```max_depth``` | 6  | 3  |
+| ```lambda``` | 1  | 1 |
+| ```learning_rate``` | 0.3000000012  | 0.2  |
+| ```missing``` | None  | None  |
+| ```objective``` | logistic:binary  | logistic:binary |
