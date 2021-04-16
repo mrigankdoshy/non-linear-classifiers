@@ -34,15 +34,8 @@ Make lists of values and get all possible combinations
 If I add more entries, it takes way too long to compute. 
 
 WARNING: This takes 1 hour compute on a MacBook Pro: 2.8 GHz Quad-Core Intel Core i7 with 16GB Memory. 
-Please comment from line 46 to 75 to run final answer directly.
+Please comment from line 40 to 68 to run final answer directly.
 '''
-
-new_y_train = []
-for i in y_train:
-    if (i == -1):
-        new_y_train.append(0)
-    else:
-        new_y_train.append(i)
 
 max_depth = [3, 4, 5]
 learning_rate = [0.05, 0.1, 0.2]
@@ -64,7 +57,7 @@ for parameter in hyperparameters:
                           missing=parameter[2], n_estimators=parameter[3], reg_lambda=parameter[4], objective=parameter[5])
 
     kfold = KFold()
-    cross_val_scores = cross_val_score(model, X_train, new_y_train, cv=kfold)
+    cross_val_scores = cross_val_score(model, X_train, y_train, cv=kfold)
     accuracy = cross_val_scores.mean() * 100
 
     if (best_accuracy < accuracy):
@@ -84,7 +77,7 @@ new_model.fit(X_train, y_train)
 print("\nNew values of the hyperparameters for XGBoost are: \n", new_model)
 
 kfold = KFold()
-cross_val_scores = cross_val_score(new_model, X_train, new_y_train, cv=kfold)
+cross_val_scores = cross_val_score(new_model, X_train, y_train, cv=kfold)
 accuracy = cross_val_scores.mean() * 100
 
 print("\nAccuracy of the new model: ", accuracy)
